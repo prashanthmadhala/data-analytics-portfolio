@@ -6,11 +6,14 @@ More information will be updated later
 
 19/01/2025
 
-E-Commerce Database Creation and SQL Queries
+Repository Content
+This repository includes:
+1. SQL queries used for creating each table, uploaded as separate .sql files.
+2. A structured approach to creating and populating the ecommerce database.
+   
 
 This repository showcases my work in building an e-commerce database using datasets gathered from the Kaggle platform. 
 
-The repository includes SQL queries for creating database tables and other related operations.
 
 Overview
 Dataset Source: The datasets used in this project were sourced from Kaggle, providing detailed information related to orders, customers, products, sellers, and payments in an e-commerce context.
@@ -30,7 +33,12 @@ The following tables were created in the ecommerce database:
 6. seller: Information about the sellers in the marketplace.
 7. products: Details of the products available for purchase.
 
-Repository Content
-This repository includes:
-1. SQL queries used for creating each table, uploaded as separate .sql files.
-2. A structured approach to creating and populating the ecommerce database.
+
+22/01/2025
+There are also separate files that contain some queries related to each table. 
+
+The names of these files begin with "querying". 
+
+There is another file called analysis.sql where I have done some basic analysis of the dataset. At the end of this file, I have returned a table with 7984 rows and 9 columns. I saved this table as a csv file and uploaded it to the data folder. The name of the file is CityStateProductCategoryStats.csv
+
+I will perform data analysis on this file using Python programming language. The analysis can be found in python_project folder. 
