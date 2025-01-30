@@ -320,3 +320,39 @@ JOIN MaxOrders mo
     AND ct.customer_state = mo.customer_state
     AND ct.total_orders = mo.max_orders
 ORDER BY ct.customer_state, ct.customer_city;
+
+#for new analysis
+SELECT DISTINCT
+    o.order_id,
+    c.customer_id,
+    c.customer_unique_id,
+    c.customer_city,
+    c.customer_state,
+    c.customer_zip_code_prefix,
+    oi.product_id,
+    s.seller_id,
+    s.seller_city,
+    s.seller_state,
+    s.seller_zip_code_prefix,
+    oi.price,
+    oi.freight_value,
+    op.payment_value,
+    op.payment_type,
+    op.payment_sequential,
+    op.payment_installments,
+    o.order_purchase_timestamp,
+    o.order_delivered_customer_date,
+    t.product_category_name_english AS product_category_name_english, -- As "sports_leisure"
+    p.product_weight_g,
+    p.product_length_cm,
+    p.product_height_cm,
+    p.product_width_cm
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+JOIN product_category_name_translation t ON p.product_category_name = t.product_category_name
+JOIN sellers s ON oi.seller_id = s.seller_id
+JOIN order_payments op ON o.order_id = op.order_id
+WHERE t.product_category_name_english = 'sports_leisure' -- Filter only for "sports_leisure"
+ORDER BY o.order_purchase_timestamp DESC;
