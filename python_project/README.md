@@ -1,4 +1,4 @@
-In this python project, I will analyze the following dataset: 
+In this python project, I analyzed the following dataset: 
 Transactions(Sports_leisure).csv 
 
 You can find this dataset in the data folder of this portfolio (data-analytics-portfolio). 
