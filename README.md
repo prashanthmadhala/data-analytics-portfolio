@@ -5,7 +5,7 @@ This is my data analytics portfolio. The main objective of this portfolio is to 
 I will add more information in this repository later (04/01/2025)
 
 # Data Analytics Portfolio
-This repository contains analytics projects across various tools and technologies - only the subfolders are created as of now (05/01/2025). 
+This repository contains analytics projects utilizing various tools- only the subfolders are created as of now (05/01/2025). 
 - `data/` - Raw or processed datasets.
 - `sql_project/` - SQL-based analytics projects.
 - `python_project/` - Python-based analytics projects (currently empty)
